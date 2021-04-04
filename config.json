@@ -8,15 +8,15 @@
         "type": "rss",
         "title": "ねぎぼうづぶろぐ",
         "description": "ついったーに書くには少し長い文章はこちらに書こうかと思います。",
-        "id": "https://example.com",
-        "link": "https://example.com/posts",
-        "image": "https://example.com/img/logo.png",
+        "id": "https://negiboudu-blog.netlify.app",
+        "link": "https://negiboudu-blog.netlify.app/posts",
+        "image": "https://negiboudu-blog.netlify.app/img/logo.png",
         "copyright": "Copyright: negiboudu",
         "language": "ja",
         "generator": "Elmstatic",
         "author": {
           "name": "negiboudu",
-          "link": "https://example.com/about"
+          "link": "https://negiboudu-blog.netlify.app/about"
         }
     },
     "tags": ["other", "software"]
