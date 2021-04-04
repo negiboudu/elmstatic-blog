@@ -88,13 +88,13 @@ footer =
             []
         , div [ class "link" ]
             [ githubIcon
-            , a [ href "https://github.com" ]
+            , a [ href "https://github.com/negiboudu" ]
                 [ text "Author's GitHub" ]
             ]
         , div [ class "link" ]
             [ twitterIcon
-            , a [ href "https://twitter.com" ]
-                [ text "Author's Twitter" ]
+            , a [ href "https://twitter.com/negiboudu" ]
+                [ text "Twitter" ]
             ]
         , div [ class "link" ]
             [ a [ href "https://www.npmjs.com/package/elmstatic" ]
