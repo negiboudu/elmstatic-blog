@@ -1,0 +1,23 @@
+{
+    "siteTitle": "ねぎぼうづぶろぐ",
+    "outputDir": "_site",
+    "copy": {
+        "/posts": "/"
+    },
+    "feed": {
+        "type": "rss",
+        "title": "ねぎぼうづぶろぐ",
+        "description": "ついったーに書くには少し長い文章はこちらに書こうかと思います。",
+        "id": "https://example.com",
+        "link": "https://example.com/posts",
+        "image": "https://example.com/img/logo.png",
+        "copyright": "Copyright: negiboudu",
+        "language": "ja",
+        "generator": "Elmstatic",
+        "author": {
+          "name": "negiboudu",
+          "link": "https://example.com/about"
+        }
+    },
+    "tags": ["other", "software"]
+}
