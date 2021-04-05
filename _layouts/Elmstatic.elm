@@ -142,6 +142,7 @@ htmlTemplate title contentNodes =
             , node "meta" [ attribute "charset" "utf-8" ] []
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
+            , script "//platform.twitter.com/widgets.js"
             , inlineScript "hljs.initHighlightingOnLoad();"
             , stylesheet "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css"
             , stylesheet "//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata"
