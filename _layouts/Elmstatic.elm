@@ -140,6 +140,7 @@ htmlTemplate title contentNodes =
             []
             [ node "title" [] [ text title ]
             , node "meta" [ attribute "charset" "utf-8" ] []
+            , node "meta" [ attribute "name" "twitter:card", attribute "content" "summary" ] []
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
             , script "//platform.twitter.com/widgets.js"
