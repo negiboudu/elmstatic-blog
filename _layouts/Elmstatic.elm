@@ -141,6 +141,10 @@ htmlTemplate title contentNodes =
             [ node "title" [] [ text title ]
             , node "meta" [ attribute "charset" "utf-8" ] []
             , node "meta" [ attribute "name" "twitter:card", attribute "content" "summary" ] []
+            , node "meta" [ attribute "name" "twitter:site", attribute "content" "@negiboudu" ] []
+            , node "meta" [ attribute "property" "og:url", attribute "content" "https://negiboudu-blog.netlify.app/" ] []
+            , node "meta" [ attribute "property" "og:title", attribute "content" "ねぎぼうづぶろぐ" ] []
+            , node "meta" [ attribute "property" "og:description", attribute "content" "twitterに書くのはちょっと長くなりそうなこと" ] []
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
             , script "//platform.twitter.com/widgets.js"
