@@ -148,6 +148,7 @@ htmlTemplate title contentNodes =
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
             , script "//platform.twitter.com/widgets.js"
+            , script "//identity.netlify.com/v1/netlify-identity-widget.js"
             , inlineScript "hljs.initHighlightingOnLoad();"
             , stylesheet "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/styles/default.min.css"
             , stylesheet "//fonts.googleapis.com/css?family=Open+Sans|Proza+Libre|Inconsolata"
