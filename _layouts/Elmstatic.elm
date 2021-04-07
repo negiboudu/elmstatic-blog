@@ -145,6 +145,7 @@ htmlTemplate title contentNodes =
             , node "meta" [ attribute "property" "og:url", attribute "content" "https://negiboudu-blog.netlify.app/" ] []
             , node "meta" [ attribute "property" "og:title", attribute "content" "ねぎぼうづぶろぐ" ] []
             , node "meta" [ attribute "property" "og:description", attribute "content" "twitterに書くのはちょっと長くなりそうなこと" ] []
+            , node "meta" [ attribute "property" "og:image", attribute "content" "https://negiboudu-blog.netlify.app/img/logo.png" ] []
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/highlight.min.js"
             , script "//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.1/languages/elm.min.js"
             , script "//platform.twitter.com/widgets.js"
