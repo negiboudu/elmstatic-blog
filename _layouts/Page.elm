@@ -43,7 +43,7 @@ markdown s =
         mdOptions : Markdown.Options
         mdOptions =
             { defaultHighlighting = Just "elm"
-            , githubFlavored = Just { tables = False, breaks = False }
+            , githubFlavored = Just { tables = True, breaks = True }
             , sanitize = False
             , smartypants = True
             }
@@ -54,7 +54,7 @@ markdown s =
 header : List (Html Never)
 header =
     [ div [ class "header-logo" ]
-        [ img [ alt "Author's blog", src "/img/logo.png", attribute "width" "100" ]
+        [ img [ alt "ねぎぼうづぶろぐ", src "/img/logo.png", attribute "width" "100" ]
             []
         ]
     , div [ class "navigation" ]
@@ -71,14 +71,7 @@ header =
 footer : Html Never
 footer =
     div [ class "footer" ]
-        [ img
-            [ alt "Author's blog"
-            , src "/img/logo.png"
-            , attribute "style" "float: left; padding-top: 7px"
-            , attribute "width" "75"
-            ]
-            []
-        , div [ class "link" ]
+        [ div [ class "link" ]
             [ a [ href "https://twitter.com/share?ref_src=twsrc%5Etfw", class "twitter-share-button" ]
                 [ text "Tweet" ]
             ]

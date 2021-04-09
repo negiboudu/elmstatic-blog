@@ -15,9 +15,8 @@
         "language": "ja",
         "generator": "Elmstatic",
         "author": {
-          "name": "negiboudu",
-          "link": "https://negiboudu-blog.netlify.app/about"
+            "name": "negiboudu",
+            "link": "https://negiboudu-blog.netlify.app/about"
         }
-    },
-    "tags": ["other", "software", "blog"]
+    }
 }
