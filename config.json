@@ -2,7 +2,7 @@
     "siteTitle": "ねぎぼうづぶろぐ",
     "outputDir": "_site",
     "copy": {
-        "/posts": "/"
+        "/top": "/"
     },
     "feed": {
         "type": "rss",

@@ -1,8 +1,12 @@
-module Page exposing (footer, header, layout, main, markdown)
+module Page exposing (layout, main, markdown)
 
+import Element exposing (..)
+import Element.Background as Background
+import Element.Font as Font
+import Element.Region exposing (description)
 import Elmstatic exposing (..)
-import Html exposing (..)
-import Html.Attributes as Attr exposing (alt, attribute, class, href, src)
+import Html exposing (Html)
+import Html.Attributes exposing (attribute)
 import Markdown
 import Styles
 
@@ -51,60 +55,27 @@ markdown s =
     Markdown.toHtmlWith mdOptions [ attribute "class" "markdown" ] s
 
 
-header : List (Html Never)
-header =
-    [ div [ class "header-logo" ]
-        [ img [ alt "ねぎぼうづぶろぐ", src "/img/logo.png", attribute "width" "100" ]
-            []
-        ]
-    , div [ class "navigation" ]
-        [ ul []
-            [ li []
-                [ a [ href "/posts" ]
-                    [ text "Posts" ]
-                ]
-            ]
-        ]
-    ]
-
-
-footer : Html Never
-footer =
-    div [ class "footer" ]
-        [ div [ class "link" ]
-            [ a [ href "https://twitter.com/share?ref_src=twsrc%5Etfw", class "twitter-share-button" ]
-                [ text "Tweet" ]
-            ]
-        , div [ class "link" ]
-            [ githubIcon
-            , a [ href "https://github.com/negiboudu" ]
-                [ text "Author's GitHub" ]
-            ]
-        , div [ class "link" ]
-            [ twitterIcon
-            , a [ href "https://twitter.com/negiboudu" ]
-                [ text "Twitter" ]
-            ]
-        , div [ class "link" ]
-            [ a [ href "https://www.npmjs.com/package/elmstatic" ]
-                [ text "Created with Elmstatic" ]
-            ]
-        ]
-
-
 layout : String -> List (Html Never) -> List (Html Never)
 layout title contentItems =
-    header
-        ++ [ div [ class "sidebar" ]
-                []
-           , div [ class "sidebar2" ]
-                []
-           , div [ class "content" ]
-                ([ h1 [] [ text title ] ] ++ contentItems)
-           , footer
-           , Elmstatic.stylesheet "/styles.css"
-           , Styles.styles
-           ]
+    [ Element.layout [ padding 20 ] <|
+        column [ spacing 50 ] <|
+            [ row []
+                [ link []
+                    { url = "/"
+                    , label = image [ width <| px 48, height <| px 48 ] { src = "/img/logo.png", description = "ねぎぼうづぶろぐ" }
+                    }
+                , el [ Font.size 50, Font.family [ Font.monospace ] ] (text title)
+                ]
+            , row []
+                [ column [ padding 10, spacing 10, alignTop, alignLeft ]
+                    [ link [ Background.color (rgb255 255 240 240) ] { url = "/", label = text "トップ" }
+                    , link [ Background.color (rgb255 255 240 240) ] { url = "posts", label = text "ぶろぐ" }
+                    ]
+                , column [ padding 10, alignTop, alignLeft, width fill ] <| List.map (\item -> html item) contentItems
+                ]
+            , row [] []
+            ]
+    ]
 
 
 main : Elmstatic.Layout
