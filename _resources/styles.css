@@ -1,3 +1,8 @@
 .markdown p {
     white-space: normal; 
+    font-size: 1.25em;
+    line-height: normal;
+}
+.post-metadata a {
+    padding-left: 0.5em;
 }

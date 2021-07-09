@@ -8,7 +8,6 @@ import Elmstatic exposing (..)
 import Html exposing (Html)
 import Html.Attributes exposing (attribute)
 import Markdown
-import Styles
 
 
 githubIcon : Html Never
@@ -69,9 +68,10 @@ layout title contentItems =
             , row []
                 [ column [ padding 10, spacing 10, alignTop, alignLeft ]
                     [ link [ Background.color (rgb255 255 240 240) ] { url = "/", label = text "トップ" }
-                    , link [ Background.color (rgb255 255 240 240) ] { url = "posts", label = text "ぶろぐ" }
+                    , link [ Background.color (rgb255 255 240 240) ] { url = "/posts", label = text "ぶろぐ" }
                     ]
                 , column [ padding 10, alignTop, alignLeft, width fill ] <| List.map (\item -> html item) contentItems
+                , column [ width <| px 50 ] []
                 ]
             , row [] []
             ]

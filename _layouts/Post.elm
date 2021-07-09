@@ -20,12 +20,7 @@ tagsToHtml tags =
 
 metadataHtml : Elmstatic.Post -> Html Never
 metadataHtml post =
-    div [ class "post-metadata" ]
-        ([ span [] [ text post.date ]
-         , span [] [ text "•" ]
-         ]
-            ++ tagsToHtml post.tags
-        )
+    div [ class "post-metadata" ] <| [ text post.date ] ++ tagsToHtml post.tags
 
 
 main : Elmstatic.Layout
